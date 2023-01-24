@@ -1,0 +1,14 @@
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/bin/Debug/net7.0/BrokerWebAPI.Data.deps.json
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/bin/Debug/net7.0/BrokerWebAPI.Data.runtimeconfig.json
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/bin/Debug/net7.0/BrokerWebAPI.Data.dll
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/bin/Debug/net7.0/BrokerWebAPI.Data.pdb
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/BrokerWebAPI.Data.csproj.AssemblyReference.cache
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/BrokerWebAPI.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/BrokerWebAPI.Data.AssemblyInfoInputs.cache
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/BrokerWebAPI.Data.AssemblyInfo.cs
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/BrokerWebAPI.Data.csproj.CoreCompileInputs.cache
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/BrokerWebAPI.Data.dll
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/refint/BrokerWebAPI.Data.dll
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/BrokerWebAPI.Data.pdb
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/BrokerWebAPI.Data.genruntimeconfig.cache
+/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/Debug/net7.0/ref/BrokerWebAPI.Data.dll

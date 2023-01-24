@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
 builder.Services.AddDbContext<BrokerDataContext>(
     o => o.UseNpgsql(builder.Configuration.GetConnectionString("BrokerDB"))
     );

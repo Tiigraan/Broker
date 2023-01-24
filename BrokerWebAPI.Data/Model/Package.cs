@@ -6,6 +6,7 @@ public class Package
 {
     public int Id { get; set; }
 
+    [Required]
     public string Content { get; set; }
 
     public bool Sent { get; set; }

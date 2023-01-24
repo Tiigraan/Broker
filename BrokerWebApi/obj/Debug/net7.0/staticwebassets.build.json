@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "rHnapCHfUGSVW8rHnoyd0xUy2Lv3IHptajBSL1CI1x4=",
-  "Source": "WebAPIPracticeProject",
-  "BasePath": "_content/WebAPIPracticeProject",
+  "Hash": "u2ESmDLLJ1fKiWG9bCDF+By320kGFwGVx6MAwg6UYEg=",
+  "Source": "BrokerWebApi",
+  "BasePath": "_content/BrokerWebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
