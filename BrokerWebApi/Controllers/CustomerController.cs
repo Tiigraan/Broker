@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WebAPIPracticeProject.Data;
 
 namespace WebAPIPracticeProject.Controllers;
 
@@ -6,6 +7,13 @@ namespace WebAPIPracticeProject.Controllers;
 [Route("[controller]")]
 public class CustomerController : ControllerBase
 {
+    private readonly BrokerDataContext _context;
+
+    public CustomerController(BrokerDataContext context)
+    {
+        _context = context;
+    }
+    
     [HttpPost]
     [Route("CreatePackages")]
     public IActionResult CreateRequest(string json)
