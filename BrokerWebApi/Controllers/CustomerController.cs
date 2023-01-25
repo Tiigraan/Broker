@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using WebAPIPracticeProject.Data;
+using WebAPIPracticeProject;
+using WebAPIPracticeProject.Data.Model;
+using File = WebAPIPracticeProject.Data.Model.File;
 
 namespace WebAPIPracticeProject.Controllers;
 
@@ -9,9 +12,12 @@ public class CustomerController : ControllerBase
 {
     private readonly BrokerDataContext _context;
 
-    public CustomerController(BrokerDataContext context)
+    private readonly long _fileSizeLimit;
+    
+    public CustomerController(BrokerDataContext context, IConfiguration config)
     {
         _context = context;
+        _fileSizeLimit = config.GetValue<long>("FileSizeLimit");
     }
     
     [HttpPost]
@@ -24,12 +30,20 @@ public class CustomerController : ControllerBase
     }
     
     [HttpPost]
-    [Route("UploadFile/{requestId:int}")]
-    public IActionResult UploadFile(int requestId)
+    [Route("SendFile")]
+    public async Task<IActionResult> SendFile(IFormFile sendFile)
     {
-        // To do
+        if (sendFile.Length >= _fileSizeLimit)
+            return BadRequest(new { message = "The file is too large" });
 
-        return BadRequest();
+        using var memoryStream = new MemoryStream();
+        await sendFile.CopyToAsync(memoryStream);
+        
+        var file = new File { Content = memoryStream.ToArray() };
+        _context.Files.Add(file);
+        await _context.SaveChangesAsync();
+
+        return Ok(new { fileId = file.Id });
     }
     
     [HttpGet]
