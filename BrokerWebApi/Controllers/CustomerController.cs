@@ -61,11 +61,12 @@ public class CustomerController : ControllerBase
     }
     
     [HttpGet]
-    [Route("GetPackagesStatus/{requestId:int}")]
-    public IActionResult GetRequestStatus(int requestId)
+    [Route("GetPackagesStatus/{packageId:int}")]
+    public async Task<IActionResult> GetPackageStatus(int packageId)
     {
-        // To do
-        
-        return BadRequest();
+        var result = await _context.Packages.FirstOrDefaultAsync(package => package.Id ==packageId);
+        if (result is null) return NotFound($@"Package with id - {packageId} not found");
+
+        return Ok(result.Sent ? "The package has been sent" : "The package has not been sent yet");
     }
 }
