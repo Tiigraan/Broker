@@ -33,11 +33,11 @@ public class CustomerController : ControllerBase
         using var memoryStream = new MemoryStream();
         await sendFile.CopyToAsync(memoryStream);
         
-        var file = new File { Content = memoryStream.ToArray() };
+        var file = new File { Content = memoryStream.ToArray(), ContentType = sendFile.ContentType};
         _context.Files.Add(file);
         await _context.SaveChangesAsync();
 
-        return Ok(new { fileId = file.Id });
+        return Ok(new { fileId = file.Id});
     }
     
     [HttpPost]
@@ -67,6 +67,6 @@ public class CustomerController : ControllerBase
         var result = await _context.Packages.FirstOrDefaultAsync(package => package.Id ==packageId);
         if (result is null) return NotFound($@"Package with id - {packageId} not found");
 
-        return Ok(result.Sent ? "The package has been sent" : "The package has not been sent yet");
+        return Ok(new {PackageStatus= result.Sent});
     }
 }
