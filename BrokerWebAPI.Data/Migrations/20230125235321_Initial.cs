@@ -17,7 +17,8 @@ namespace WebAPIPracticeProject.Data.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Content = table.Column<byte[]>(type: "bytea", nullable: false)
+                    Content = table.Column<byte[]>(type: "bytea", nullable: false),
+                    ContentType = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,7 +32,7 @@ namespace WebAPIPracticeProject.Data.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Content = table.Column<string>(type: "text", nullable: false),
-                    Sent = table.Column<bool>(type: "boolean", nullable: false),
+                    Sent = table.Column<byte>(type: "smallint", nullable: false),
                     FileId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>

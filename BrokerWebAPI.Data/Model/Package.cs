@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebAPIPracticeProject.Data.Model;
 
@@ -9,8 +10,8 @@ public class Package
     [Required]
     public string Content { get; set; }
 
-    public bool Sent { get; set; }
-    
+    public Status Sent { get; set; }
+
     public int FileId { get; set; }
 }
 
