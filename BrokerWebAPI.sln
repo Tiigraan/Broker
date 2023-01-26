@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerWebApi", "BrokerWebAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerWebAPI.Data", "BrokerWebAPI.Data\BrokerWebAPI.Data.csproj", "{80FC9EF5-1EFC-4DE3-B076-F509A44E00C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerWebAPITests", "BrokerWebAPITests\BrokerWebAPITests.csproj", "{1BE6A12D-8CE2-4F90-AE2B-4DD2C17935DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{80FC9EF5-1EFC-4DE3-B076-F509A44E00C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80FC9EF5-1EFC-4DE3-B076-F509A44E00C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80FC9EF5-1EFC-4DE3-B076-F509A44E00C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE6A12D-8CE2-4F90-AE2B-4DD2C17935DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE6A12D-8CE2-4F90-AE2B-4DD2C17935DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE6A12D-8CE2-4F90-AE2B-4DD2C17935DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE6A12D-8CE2-4F90-AE2B-4DD2C17935DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
