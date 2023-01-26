@@ -8,4 +8,7 @@ public class File
     
     [Required]
     public byte[] Content { get; set; }
+    
+    [Required]
+    public string ContentType { get; set; }
 }

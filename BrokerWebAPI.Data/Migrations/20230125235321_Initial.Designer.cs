@@ -11,7 +11,7 @@ using WebAPIPracticeProject.Data;
 namespace WebAPIPracticeProject.Data.Migrations
 {
     [DbContext(typeof(BrokerDataContext))]
-    [Migration("20230124222202_Initial")]
+    [Migration("20230125235321_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -36,6 +36,10 @@ namespace WebAPIPracticeProject.Data.Migrations
                         .IsRequired()
                         .HasColumnType("bytea");
 
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.HasKey("Id");
 
                     b.ToTable("Files");
@@ -56,8 +60,8 @@ namespace WebAPIPracticeProject.Data.Migrations
                     b.Property<int>("FileId")
                         .HasColumnType("integer");
 
-                    b.Property<bool>("Sent")
-                        .HasColumnType("boolean");
+                    b.Property<byte>("Sent")
+                        .HasColumnType("smallint");
 
                     b.HasKey("Id");
 
