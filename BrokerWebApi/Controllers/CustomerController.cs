@@ -26,6 +26,8 @@ public class CustomerController : ControllerBase
     
     [HttpPost]
     [Route("SendFile")]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(int))]
     public async Task<IActionResult> SendFile(IFormFile sendFile)
     {
         if (sendFile.Length >= _fileSizeLimit) return BadRequest("The file is too large" );
@@ -37,18 +39,22 @@ public class CustomerController : ControllerBase
         _context.Files.Add(file);
         await _context.SaveChangesAsync();
 
-        return Ok(new { fileId = file.Id});
+        return Accepted(file.Id);
     }
     
     [HttpPost]
     [Route("SendPackage")]
+    [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
+    [ProducesResponseType(StatusCodes.Status422UnprocessableEntity, Type = typeof(string))]
+    [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+    [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(int))]
     public async Task<IActionResult> SendPackage(string jsonPackage, int fileId)
     {
         var package = JsonNode.Parse(jsonPackage);
         if (package is null) return BadRequest("Package failed deserialization");
 
         foreach (var prop in new[] {"Type", "Version"})
-            if (package[prop] is null) return BadRequest($@"missing field '{prop}'");
+            if (package[prop] is null) return UnprocessableEntity($@"missing field '{prop}'");
 
         if (await _context.Files.FirstOrDefaultAsync(file => file.Id == fileId) is null)
             return NotFound($@"Not found file with id - {fileId}");
@@ -57,16 +63,18 @@ public class CustomerController : ControllerBase
         _context.Packages.Add(newPackage);
         await _context.SaveChangesAsync();
         
-        return Ok(new {packageId = newPackage.Id});
+        return Accepted(newPackage.Id);
     }
     
     [HttpGet]
     [Route("GetPackagesStatus/{packageId:int}")]
+    [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
+    [ProducesResponseType(StatusCodes.Status204NoContent, Type = typeof(Status))]
     public async Task<IActionResult> GetPackageStatus(int packageId)
     {
-        var result = await _context.Packages.FirstOrDefaultAsync(package => package.Id ==packageId);
-        if (result is null) return NotFound($@"Package with id - {packageId} not found");
+        var package = await _context.Packages.FirstOrDefaultAsync(package => package.Id ==packageId);
+        if (package is null) return NotFound($@"Package with id - {packageId} not found");
 
-        return Ok(new {PackageStatus= result.Sent});
+        return Ok(package.Sent);
     }
 }

@@ -6,7 +6,8 @@
 /projectSettingsUpdater.xml
 /modules.xml
 /.idea.WebAPIPracticeProject.iml
-BrokerWebApi/bin/D
+/BrokerWebApi/bin/Debug/
+/BrokerWebApi/obj/Debug/
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
