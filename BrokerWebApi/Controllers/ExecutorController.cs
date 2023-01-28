@@ -1,4 +1,9 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WebAPIPracticeProject.Data;
+using WebAPIPracticeProject.Data.Model;
+using File = System.IO.File;
 
 namespace WebAPIPracticeProject.Controllers;
 
@@ -6,30 +11,59 @@ namespace WebAPIPracticeProject.Controllers;
 [Route("[controller]")]
 public class ExecutorController : ControllerBase
 {
-    [HttpGet]
-    [Route("GetNewPackages")]
-    public IActionResult GetNewPackages()
+    private readonly BrokerDataContext _context;
+    
+    public ExecutorController(BrokerDataContext context)
     {
-        // To do
+        _context = context;
+    }
+    
+    [HttpGet]
+    [Route("GetNewPackagesAndFiles")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+    public async Task<IActionResult> GetNewPackagesAndFiles()
+    {
+        var newPackages = await _context.Packages
+            .Where(p => p.Sent == Status.Waiting)
+            .ToArrayAsync();
         
-        return NotFound();
+        if (newPackages.Length == 0)
+            return NoContent();
+
+        var result = JsonSerializer.Serialize(new
+        {
+            PackageIds = newPackages.Select(p => p.Id).ToArray(),
+            FileIds = newPackages.Select(p => p.FileId).ToArray()
+        });
+        
+        return Ok(result);
     }
 
+    // Можно добавить проверку на статус файла, если он уже был отправлен, то сообщать об этом...
     [HttpGet]
-    [Route("GetPackage/{packageId:int}")]
-    public IActionResult GetPackage(int packageId)
+    [Route("GetPackageById/{packageId:int}")]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
+    public async Task<IActionResult> GetPackageById(int packageId)
     {
-        // To do
-        
-        return NotFound();
+        var package = await _context.Packages.FirstOrDefaultAsync(p => p.Id == packageId);
+        if (package is null) return NotFound();
+
+        package.Sent = Status.Sent;
+        await _context.SaveChangesAsync();
+
+        return Ok(package.Content);
     }
     
     [HttpGet]
     [Route("GetFile/{fileId:int}")]
-    public IActionResult GetFile(int fileId)
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(File))]
+    public async Task<IActionResult> GetFileById(int fileId)
     {
-        // To do
+        var file = await _context.Files.FirstOrDefaultAsync(f => f.Id == fileId);
         
-        return NotFound();
+        return file is null ? NotFound() : Ok(File(file.Content, file.ContentType));
     }
 }
