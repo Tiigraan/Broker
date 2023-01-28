@@ -1,0 +1,25 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2496d994_002D4865_002D4eb2_002D952c_002Dd75fea4e4e28/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FirstTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::1BE6A12D-8CE2-4F90-AE2B-4DD2C17935DB::net7.0::BrokerWebAPITests.CustomerControllerTest.SendFileTests.FirstTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=387bf0ba_002Dd054_002D423d_002D9d7e_002D02c087f3e798/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;BrokerWebAPITests&amp;gt; #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests" Presentation="&amp;lt;BrokerWebAPITests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7c989649_002D28b4_002D4b2c_002Dbf15_002Dd5eabd51e7a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SendFileTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::1BE6A12D-8CE2-4F90-AE2B-4DD2C17935DB::net7.0::BrokerWebAPITests.CustomerControllerTest.SendFileTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=984be6b3_002D8239_002D4ec2_002Da7d0_002De11437a300a1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SendFileTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::1BE6A12D-8CE2-4F90-AE2B-4DD2C17935DB::net7.0::BrokerWebAPITests.CustomerControllerTest.SendFileTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9e1d67a0_002D090c_002D463e_002Da9d7_002D8bf97cd37b6f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;BrokerWebAPITests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests" Presentation="&amp;lt;BrokerWebAPITests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d7357d7b_002Df900_002D49bf_002D87e8_002D3983ca27c9a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;BrokerWebAPITests&amp;gt; #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests" Presentation="&amp;lt;BrokerWebAPITests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
