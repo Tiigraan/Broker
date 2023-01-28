@@ -4,14 +4,14 @@
     "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/BrokerWebAPITests.csproj": {}
   },
   "projects": {
-    "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/BrokerWebAPITests.csproj": {
+    "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/BrokerWebAPI.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/BrokerWebAPITests.csproj",
-        "projectName": "BrokerWebAPITests",
-        "projectPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/BrokerWebAPITests.csproj",
+        "projectUniqueName": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/BrokerWebAPI.Data.csproj",
+        "projectName": "BrokerWebAPI.Data",
+        "projectPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/BrokerWebAPI.Data.csproj",
         "packagesPath": "/Users/tigran/.nuget/packages/",
-        "outputPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/obj/",
+        "outputPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tigran/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,164 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebApi/BrokerWebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebApi/BrokerWebApi.csproj",
+        "projectName": "BrokerWebApi",
+        "projectPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebApi/BrokerWebApi.csproj",
+        "packagesPath": "/Users/tigran/.nuget/packages/",
+        "outputPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/tigran/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/BrokerWebAPI.Data.csproj": {
+                "projectPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/BrokerWebAPI.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/BrokerWebAPITests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/BrokerWebAPITests.csproj",
+        "projectName": "BrokerWebAPITests",
+        "projectPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/BrokerWebAPITests.csproj",
+        "packagesPath": "/Users/tigran/.nuget/packages/",
+        "outputPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPITests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/tigran/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/BrokerWebAPI.Data.csproj": {
+                "projectPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebAPI.Data/BrokerWebAPI.Data.csproj"
+              },
+              "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebApi/BrokerWebApi.csproj": {
+                "projectPath": "/Users/tigran/RiderProjects/WebAPIPracticeProject/BrokerWebApi/BrokerWebApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.3.2, )"
