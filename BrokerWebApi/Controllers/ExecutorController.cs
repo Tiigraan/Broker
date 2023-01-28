@@ -57,7 +57,7 @@ public class ExecutorController : ControllerBase
     }
     
     [HttpGet]
-    [Route("GetFile/{fileId:int}")]
+    [Route("GetFileById/{fileId:int}")]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(File))]
     public async Task<IActionResult> GetFileById(int fileId)
